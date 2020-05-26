@@ -15,14 +15,47 @@
   <body>
     <div class="container">
       <div class="row py-3">
-        <div class="col-12">
-          <h2 class="text-center">Marci's Math Game</h2>
+        <div class="col-12 pb-3 border-bottom">
+          <h2 class="text-center mb-3">Marci's Math Game</h2>
+          <div id="intro">
+            <p>Correctly solve as many simple (two-number) math equations as you can before time runs out. The game starts with 10 seconds on the clock. For every correct answer 1 second is added back.</p> 
+            <p>Before you start the game, choose among the following options to set the level of difficulty:</p>
+            <table class="options ml-sm-3">
+              <tr class="align-top">
+                <td>Operations: </td>
+                <td class="pb-3">
+                  <input type="radio" name="ops" class="mr-2" value="a" checked>Addition only</br>
+                  <input type="radio" name="ops" class="mr-2" value="b">Add, subtract</br>
+                  <input type="radio" name="ops" class="mr-2" value="c">Add, subtract, multiply
+                </td>
+              </tr>
+              <tr class="align-top">
+                <td class="pr-4">Range of operands: </td>
+                <td class="pb-4">
+                  <input type="radio" name="max" class="mr-2" value="10" checked>Numbers &le; 25 </br>
+                  <input type="radio" name="max" class="mr-2" value="25">Numbers &le; 25 </br>
+                  <input type="radio" name="max" class="mr-2" value="50">Numbers &le; 50
+                </td>
+              </tr>
+            </table>
+            <div class="text-center">
+              <button id="start">Let the game begin!</button>
+            </div>
+          </div>
         </div>
-
-
-
+        <div class="col-12 invisible" id="play">
+          <p class="text-center"><small><i>Enter your answer in the box next to the equation</i></small></p>
+          <div class="row justify-content-center">
+            <div class="col text-right pr-4">
+              <h1 id="Q"></h1>
+            </div>
+            <div class="col">
+              <input class="form-control form-control-lg" type="number" id="A">
+            </div>
+          </div>
       </div>
     </div>
+    
  
   </body>
 </html>
