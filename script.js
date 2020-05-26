@@ -5,7 +5,7 @@ var generateQ = function() {
   var num2 = Math.floor(Math.random() * max) + 1;
   var op = $('input:radio[name=ops]:checked').val();
   var opArrB = ['+', '-'];
-  var opArrC = ['+', '-', '*'];
+  var opArrC = ['+', '-', 'x'];
   var operator;
   var question;
   var answer;
@@ -33,15 +33,20 @@ var generateQ = function() {
       case '-':
         answer = num1 - num2;
         break;
-      case '*':
+      case 'x':
         answer = num1 * num2;
     }
-  }
-   
-  console.log(question, answer);
-}
+  };
+  $('#Q').text(question);
+};
+
+
 
 $(document).ready(function() {
-  $('#ready').click(generateQ);
+  $('#start').click(function(){
+    $('#intro').css("display", "none")
+    $('#play').removeClass("invisible");
+    generateQ();
+  });
 });
   
