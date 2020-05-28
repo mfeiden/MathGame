@@ -15,12 +15,12 @@
   <body>
     <div class="container">
       <div class="row py-3">
-        <div class="col-12 pb-3 border-bottom">
-          <h2 class="text-center mb-3">Marci's Math Game</h2>
+        <div class="col-12">
+          <h2 class="text-center mb-4">Marci's Math Game</h2>
           <div id="intro">
             <p>Correctly solve as many simple (two-number) math equations as you can before time runs out. The game starts with 10 seconds on the clock. For every correct answer 1 second is added back.</p> 
             <p>Before you start the game, choose among the following options to set the level of difficulty:</p>
-            <table class="options ml-sm-3">
+            <table class="options">
               <tr class="align-top">
                 <td>Operations: </td>
                 <td class="pb-3">
@@ -30,7 +30,7 @@
                 </td>
               </tr>
               <tr class="align-top">
-                <td class="pr-4">Range of operands: </td>
+                <td class="pr-2 pr-sm-4">Range of operands: </td>
                 <td class="pb-4">
                   <input type="radio" name="max" class="mr-2" value="10" checked>Numbers &le; 10 </br>
                   <input type="radio" name="max" class="mr-2" value="25">Numbers &le; 25 </br>
@@ -43,7 +43,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 invisible" id="play">
+        <div class="col-12 invisible pb-3" id="play">
           <p class="text-center"><small><i>Enter your answer in the box next to the equation</i></small></p>
           <div class="row justify-content-center">
             <div class="col text-right pr-4">
@@ -52,22 +52,17 @@
             <div class="col">
               <input class="form-control form-control-lg" type="number" id="A">
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col">
-              <h5 id="score">Score: <span></span></h5>
-            </div>
-            <div class="col">
-              <h5 id="timer">Seconds Remaining: <span></span></h5>
+            <div class="col-12 text-center pt-4">
+              <h5 id="timer"><span></span> seconds</h5>
+              <p id="score">Score: <span></span></p>
             </div>
           </div>
-      </div>
-      <div class="col-12 invisible" id="end">
-        <h3>Game Over!</3>
-        <button id="new">Play again</button>
+        </div>
+        <div class="col-12 invisible text-center" id="end">
+          <h4 class="mb-3">Game Over!</h4>
+          <p><button id="new">Play again</button></p>
+        </div>
       </div>
     </div>
-    
- 
   </body>
 </html>
